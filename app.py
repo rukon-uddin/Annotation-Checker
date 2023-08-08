@@ -1,7 +1,7 @@
 from flask import Flask, render_template, json, request
 import os
 import glob
-from yhf import YOLO_ConvertAndDrawBox as ycdb
+from yhf import YOLO_ConvertAndDrawBox as ycdb  # git clone https://github.com/rukon-uddin/YOLO-Helper-Function.git  # rename the file to yhf
 import cv2
 
 app = Flask(__name__)
