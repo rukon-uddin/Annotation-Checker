@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+    <div class="slideshow-container text-center position-relative">
+        {% for img_path, label in user_image.items() %}
+        <div class="mySlides">
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{label}}</button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Car</a>
+                  <a class="dropdown-item" href="#">Bike</a>
+                  <a class="dropdown-item" href="#">Cycle</a>
+                </div>
+              </div>
+              
+            <img src={{img_path}} style="width:100%" , height="600">
+        </div>
+        {% endfor %}
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>        
+    </div>
+    <button type="button" class="btn btn-danger position-absolute top-100 start-50 translate-middle">Delete</button>
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>
