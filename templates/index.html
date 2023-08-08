@@ -13,12 +13,16 @@
     <div class="slideshow-container">
         {% for img_path, label in user_image.items() %}
         <div class="mySlides">
-            <h2 class="text-center">{{label}}</h2>
-            <img src={{img_path}} style="width:100%" , height="600">
+            <!-- <h2 class="text-center">{{label}}</h2> -->
+            <figure>
+                <img src={{img_path}} style="width:100%" height="600">
+                <figcaption class="text-center" style="font-size:30px;">{{label}}</figcaption>
+            </figure>
         </div>
         {% endfor %}
         <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>        
+        <a class="next" onclick="plusSlides(1)">❯</a>
+                
     </div>
     <div class="slideshow-container">
         <div class="d-flex">
